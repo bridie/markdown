@@ -13,4 +13,17 @@ describe Converter do
     end
 
   end
+
+  describe "#convert_italics" do
+
+  	it "wraps a word wrapped in astericks in <em> tags" do
+    	expect(converter.convert_italics("*test*")).to eq "<em>test</em>"
+    end
+
+    it "wraps text (including spaces) wrapped in astericks in <em> tags" do
+    	expect(converter.convert_italics("*test test*")).to eq "<em>test test</em>"
+    end
+
+   end
+
 end

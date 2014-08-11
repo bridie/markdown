@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'sinatra/reloader'
 require './converter_class'
+also_reload './converter_class.rb'
 
 set :public_folder, File.dirname(__FILE__)
 
@@ -13,8 +14,9 @@ post '/html' do
 
 	converter = Converter.new
 	html = converter.convert_paragraph(plaintext)
+	html = converter.convert_italics(html)
 
-	html = CGI.escapeHTML html
+	#html = CGI.escapeHTML html
 
 end
 

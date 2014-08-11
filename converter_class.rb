@@ -6,4 +6,8 @@ class Converter
 		html = html << "</p>"
 	end
 
+	def convert_italics(string)
+		string.gsub(/\*(\S+)\*/, "<em\>\\1\<\/em\>")
+	end
+
 end

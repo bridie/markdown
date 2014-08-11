@@ -7,7 +7,7 @@ class Converter
 	end
 
 	def convert_italics(string)
-		string.gsub(/\*(\S+)\*/, "<em\>\\1\<\/em\>")
+		string.gsub(/\*(.+)\*/, "<em>\\1</em>")
 	end
 
 end

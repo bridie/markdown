@@ -24,6 +24,10 @@ describe Converter do
     	expect(converter.convert_italics("*test test*")).to eq "<em>test test</em>"
     end
 
+    it "wraps text (including new lines) wrapped in astericks in <em> tags" do
+    	expect(converter.convert_italics("*test\n test*")).to eq "<em>test\n test</em>"
+    end
+
    end
 
 end

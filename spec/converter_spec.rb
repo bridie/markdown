@@ -24,9 +24,23 @@ describe Converter do
     	expect(converter.convert_italics("*test test*")).to eq "<em>test test</em>"
     end
 
-    it "wraps text (including new lines) wrapped in astericks in <em> tags" do
-    	expect(converter.convert_italics("*test\n test*")).to eq "<em>test\n test</em>"
+   end
+
+   describe "#convert_bold" do
+
+    it "wraps a word wrapped in double astericks in <b> tags" do
+      expect(converter.convert_bold("**test**")).to eq "<b>test</b>"
     end
+
+    it "wraps text (including spaces) wrapped in double astericks in <b> tags" do
+      expect(converter.convert_bold("**test test**")).to eq "<b>test test</b>"
+    end
+
+   end
+
+   describe "#convert_list" do
+
+    
 
    end
 

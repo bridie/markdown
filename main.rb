@@ -15,6 +15,8 @@ post '/html' do
 	converter = Converter.new
 	html = converter.convert_paragraph(plaintext)
 	html = converter.convert_italics(html)
+	html = converter.convert_bold(html)
+	html = converter.convert_list(html)
 
 	#html = CGI.escapeHTML html
 

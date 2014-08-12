@@ -13,15 +13,7 @@ post '/html' do
 	plaintext = params['plaintext']
 
 	converter = Converter.new
-	html = converter.convert_paragraph(plaintext)
-	html = converter.convert_italics(html)
-	html = converter.convert_bold(html)
-	html = converter.convert_list(html)
-	html = converter.convert_link(html)
-	html = converter.convert_strikethrough(html)
-	html = converter.convert_superscript(html)
-
-	#html = CGI.escapeHTML html
+	html = converter.convert_all_text(plaintext)
 
 end
 

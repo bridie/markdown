@@ -19,6 +19,7 @@ post '/html' do
 	html = converter.convert_list(html)
 	html = converter.convert_link(html)
 	html = converter.convert_strikethrough(html)
+	html = converter.convert_superscript(html)
 
 	#html = CGI.escapeHTML html
 

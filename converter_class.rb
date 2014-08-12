@@ -27,4 +27,8 @@ class Converter
 		string.gsub(/~~(.+)~~/, "<del>\\1</del>")
 	end
 
+	def convert_superscript(string)
+		string.gsub(/\^(.+?)(\s|\<\/p\>)/, "<sup>\\1</sup>\\2")
+	end
+
 end

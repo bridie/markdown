@@ -67,4 +67,16 @@ describe Converter do
 
    end
 
+   describe "#convert_superscript" do
+
+    it "characters after ^ within a word are wrapped in <sup> tags" do
+      expect(converter.convert_superscript("super^script test")).to eq "super<sup>script</sup> test"
+    end
+
+    it "characters after ^ within a word are wrapped in <sup> tags when the word is the last word in the paragraph" do
+      expect(converter.convert_superscript("super^script</p>")).to eq "super<sup>script</sup></p>"
+    end
+
+   end
+
 end

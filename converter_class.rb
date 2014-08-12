@@ -20,7 +20,11 @@ class Converter
 	end
 
 	def convert_link(string)
-		link_text = string.gsub(/\[(.+?)\]\((.+?)\)/, "<a href='\\2'>\\1</a>")
-	end	
+		string.gsub(/\[(.+?)\]\((.+?)\)/, "<a href='\\2'>\\1</a>")
+	end
+
+	def convert_strikethrough(string)
+		string.gsub(/~~(.+)~~/, "<del>\\1</del>")
+	end
 
 end

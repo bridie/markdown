@@ -59,4 +59,12 @@ describe Converter do
 
    end
 
+   describe "#convert_strikethrough" do
+
+    it "wraps text wrapped in double ~ in <del> tags" do
+      expect(converter.convert_strikethrough("~~test~~")).to eq "<del>test</del>"
+    end
+
+   end
+
 end

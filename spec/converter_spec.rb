@@ -44,9 +44,17 @@ describe Converter do
       expect(converter.convert_list("<p>*item 1</p><p>*item 2</p>")).to eq "<ul><li>item 1</li><li>item 2</li></ul>"
     end
 
-    it "wraps text wrapped in <p> tags and beginning with an asterisk in <li> tags, <li> tags also wrapped in <ul> tags for multiple list embedded within text" do
+    it "wraps text wrapped in <p> tags and beginning with an asterisk in <li> tags, <li> tags also wrapped in <ul> tags for multiple lists embedded within text" do
       expect(converter.convert_list("<p>*item 1</p><p>*item 2</p><p>non list text</p><p>*item 3</p><p>*item 4</p>"))
       .to eq "<ul><li>item 1</li><li>item 2</li></ul><p>non list text</p><ul><li>item 3</li><li>item 4</li></ul>"
+    end
+
+   end
+
+   describe "#convert_link" do
+
+    it "text wrapped in square brackets are wrapped in <a> tags and text wrapped in parentheses are the url" do
+      expect(converter.convert_link("[Google!](www.google.com)")).to eq "<a href='www.google.com'>Google!</a>"
     end
 
    end

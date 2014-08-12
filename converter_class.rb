@@ -16,7 +16,11 @@ class Converter
 
 	def convert_list(string)
 		string = string.gsub(/\<p\>\*(.+?)\<\/p\>/, "<li>\\1</li>")
-		string.gsub(/(\<li\>.+?\<\/li\>(?!\<li\>))/, "<ul>\\1</ul>")		
+		string.gsub(/(\<li\>.+?\<\/li\>(?!\<li\>))/, "<ul>\\1</ul>")	
 	end
+
+	def convert_link(string)
+		link_text = string.gsub(/\[(.+?)\]\((.+?)\)/, "<a href='\\2'>\\1</a>")
+	end	
 
 end

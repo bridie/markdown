@@ -17,6 +17,7 @@ post '/html' do
 	html = converter.convert_italics(html)
 	html = converter.convert_bold(html)
 	html = converter.convert_list(html)
+	html = converter.convert_link(html)
 
 	#html = CGI.escapeHTML html
 

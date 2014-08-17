@@ -7,7 +7,7 @@ class Converter
 	end
 
 	def convert_italics(string)
-		string.gsub(/(?<!<p>)(?<!\*)\*(?!\*)(.+)(?<!\*)\*(?!\*)/, "<em>\\1</em>")
+		string.gsub(/(?<!<p>)(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)/, "<em>\\1</em>")
 	end
 
 	def convert_bold(string)

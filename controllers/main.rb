@@ -1,6 +1,6 @@
 require 'sinatra'
 require 'json'
-require './models/converter_class'
+require './converter_class'
 
 set :public_folder, File.dirname(__FILE__)
 

@@ -46,8 +46,12 @@ body {
         margin-top: 40px; }
       body #main-content #text-input-output #text-output-box {
         border: 1px solid #CACACC;
-        min-height: 140px; }
+        min-height: 140px;
+        padding: 5px; }
       body #main-content #text-input-output form textarea {
+        font-family: 'Droid Serif', serif;
+        color: #808C99;
+        font-size: 16px;
         width: 100%;
         border: 1px solid #CACACC;
         border-radius: 2px;

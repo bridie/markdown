@@ -1,8 +1,6 @@
 require 'sinatra'
-require 'sinatra/reloader'
 require 'json'
 require './converter_class'
-also_reload './converter_class.rb'
 
 set :public_folder, File.dirname(__FILE__)
 

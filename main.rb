@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'sinatra/reloader'
+require 'json'
 require './converter_class'
 also_reload './converter_class.rb'
 
@@ -9,16 +10,15 @@ get '/' do
   erb	:form
 end
 
-post '/html' do
+post '/' do
+
 	plaintext = params['plaintext']
 
 	converter = Converter.new
 	html = converter.convert_all_text(plaintext)
 
-end
+	{ :html => html}.to_json
 
-get '/html' do
-	erb	:html
 end
 
 

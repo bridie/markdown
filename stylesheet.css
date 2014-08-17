@@ -1,15 +1,62 @@
-.italics {
-	font-style: italic;
-}
-
-.bold {
-	font-weight: bold;
-}
-
-.no-bullets {
-	list-style: none;
-}
-
-ul {
-	padding-left: 0px;
-}
+body {
+  font-family: 'Droid Serif', serif;
+  width: 1000px;
+  margin: 0px auto; }
+  body header #main-title {
+    color: #669999;
+    text-align: center;
+    padding: 30px 0px 5px 0px;
+    font-size: 40px;
+    font-weight: bold; }
+  body header #main-sub-title {
+    color: #669999;
+    text-align: center;
+    padding: 5px 0px 15px 0px;
+    border-bottom: 1px solid #CACACC;
+    font-weight: normal; }
+  body #main-content {
+    color: #808C99; }
+    body #main-content #table-content {
+      float: left;
+      width: 40%; }
+      body #main-content #table-content table {
+        font-size: 16px;
+        color: #808C99;
+        border-collapse: collapse; }
+        body #main-content #table-content table tr th {
+          border: 1px solid #CACACC;
+          padding: 10px; }
+        body #main-content #table-content table tr td {
+          border: 1px solid #CACACC;
+          padding: 10px; }
+          body #main-content #table-content table tr td ul {
+            padding-left: 9px; }
+            body #main-content #table-content table tr td ul .no-bullets {
+              list-style: none; }
+          body #main-content #table-content table tr td a {
+            color: #5395DB; }
+        body #main-content #table-content table tr .italics {
+          font-style: italic; }
+        body #main-content #table-content table tr .bold {
+          font-weight: bolder; }
+    body #main-content #text-input-output {
+      float: right;
+      width: 60%; }
+      body #main-content #text-input-output #text-output-title {
+        margin-top: 40px; }
+      body #main-content #text-input-output #text-output-box {
+        border: 1px solid #CACACC;
+        min-height: 100px; }
+      body #main-content #text-input-output form textarea {
+        width: 100%;
+        border: 1px solid #CACACC;
+        border-radius: 2px;
+        height: 100px; }
+      body #main-content #text-input-output form #go-button {
+        font-size: 16px;
+        width: 50px;
+        border-radius: 2px;
+        float: right;
+        margin: 10px 0px;
+        background-color: #4B9494;
+        color: white; }

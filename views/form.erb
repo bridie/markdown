@@ -1,52 +1,76 @@
 <html>
   <head>
   	<title>From plaintext to HTML</title>
+  	<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
   	<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+  	<script language="JavaScript" src="/jquery-2.1.1.min.js"></script>
+  	<script language="JavaScript" src="/output.js"></script>
   </head>
 	<body>
 
-	<form action="/html" method="POST">
-		<label for='plaintext' style='float:left; padding: 20px;'>Input any text and generate html from it</label>
-	  <textarea name='plaintext' cols='100' rows='20'></textarea>
-	  <input type='submit' value='Go'>
-	</form>
+		<header>
+			<h1 id="main-title">Markdown</h1>
+			<h3 id="main-sub-title">Customised version of Markdown, similar to reddit.com</h3>
+		</header>
 
-	<table>
-		<tr>
-			<td>You type</td>
-			<td>You see</td>
-		</tr>
-		<tr>
-			<td>*italics*</td>
-			<td class='italics'>italics</td>
-		</tr>
-		<tr>
-			<td>**italics**</td>
-			<td class='bold'>bold</td>
-		</tr>
-		<tr>
-			<td>
-				<ul>
-					<li class='no-bullets'>*item 1</li>
-					<li class='no-bullets'>*item 2</li>
-					<li class='no-bullets'>*item 3</li>
-				</ul>
-			</td>
-			<td>
-				<ul>
-					<li>item 1</li>
-					<li>item 2</li>
-					<li>item 3</li>
-				</ul>
-			</td>
-		</tr>
-		<tr>
-			<td>[Google!](https://www.google.co.uk)</td>
-			<td><a href="https://www.google.co.uk">Google!</a></td>
-		</tr>
-		<tr>
-			<td>~~strikethrough~~</td>
-			<td><del>strikethrough</del></td>
-		</tr>
+		<div id="main-content">
+
+			<div id="text-input-output">
+				<h2 class="content-sub-title">Text input</h2>
+				<form id="text-input-form" method="post	">
+				  <textarea id="text-input" name='plaintext'></textarea>
+				  <button id="go-button" type='submit'>Go</button>
+				</form>
+
+				<h2 id="text-output-title" class="content-sub-title">Text output</h2>
+				<div id="text-output-box">
+				</div>
+			</div>
+
+			<div id="table-content">
+				<h2 id="table-sub-title" class="content-sub-title">Markdown syntax</h2>
+				<table>
+					<tr>
+						<th>You type</th>
+						<th>You see</th>
+					</tr>
+					<tr>
+						<td>*italics*</td>
+						<td class='italics'>italics</td>
+					</tr>
+					<tr>
+						<td>**bold**</td>
+						<td class='bold'>bold</td>
+					</tr>
+					<tr>
+						<td>
+							<ul>
+								<li class='no-bullets'>*item 1</li>
+								<li class='no-bullets'>*item 2</li>
+								<li class='no-bullets'>*item 3</li>
+							</ul>
+						</td>
+						<td>
+							<ul>
+								<li>item 1</li>
+								<li>item 2</li>
+								<li>item 3</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>[Google!](https://www.google.co.uk)</td>
+						<td><a href="https://www.google.co.uk">Google!</a></td>
+					</tr>
+					<tr>
+						<td>~~strikethrough~~</td>
+						<td><del>strikethrough</del></td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="text-output">
+			</div>
+		</div>
 	</body>
 </html>
